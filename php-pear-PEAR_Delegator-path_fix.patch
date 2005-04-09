@@ -1,0 +1,26 @@
+--- Delegator.php~	2005-04-09 05:56:56.000000000 +0200
++++ Delegator.php	2005-04-09 16:45:09.000000000 +0200
+@@ -36,12 +36,12 @@
+ /**
+  * This includes the exceptions thrown.
+  */
+-require_once 'Delegator/DelegatorExceptions.php';
++require_once 'PEAR/Delegator/DelegatorExceptions.php';
+ 
+ /**
+  * This includes highly internal parts.
+  */
+-require_once 'Delegator/DelegatorInternals.php';
++require_once 'PEAR/Delegator/DelegatorInternals.php';
+ 
+ /**
+  * Base class for objects that allow delegation.
+@@ -295,7 +295,7 @@
+      public static function addExtensions()
+      {
+         if (!self::$_addExtensions) {
+-            require_once 'Delegator/DelegatorExtensions.php';
++            require_once 'PEAR/Delegator/DelegatorExtensions.php';
+             self::$_addExtensions = true;
+         }
+         
