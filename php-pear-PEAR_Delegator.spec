@@ -8,14 +8,14 @@ Summary:	%{_pearname} - delegation for PHP
 Summary(pl):	%{_pearname} - delegacja dla PHP
 Name:		php-pear-%{_pearname}
 Version:	0.1.0
-Release:	1
+Release:	1.1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	196de218a439a2f2591177d43fe2a072
 Patch0:		%{name}-path_fix.patch
 URL:		http://pear.php.net/package/PEAR_Delegator/
-BuildRequires:	rpm-php-pearprov >= 4.0.2-98
+BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -35,21 +35,21 @@ interesuj±ce paradygmaty.
 Ta klasa ma w PEAR status: %{_status}.
 
 %prep
-%setup -q -c
-cd %{_pearname}-%{version}
+%pear_package_setup
+cd ./%{php_pear_dir}/%{_class}
 %patch0 -p0
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
-
-install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
-install %{_pearname}-%{version}/%{_subclass}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
+install -d $RPM_BUILD_ROOT%{php_pear_dir}
+%pear_package_install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc install.log
+%{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/%{_class}/%{_subclass}.php
 %{php_pear_dir}/%{_class}/%{_subclass}
