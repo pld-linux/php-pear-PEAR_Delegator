@@ -8,7 +8,7 @@ Summary:	%{_pearname} - delegation for PHP
 Summary(pl):	%{_pearname} - delegacja dla PHP
 Name:		php-pear-%{_pearname}
 Version:	0.1.0
-Release:	1.1
+Release:	2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
