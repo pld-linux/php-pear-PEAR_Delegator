@@ -15,6 +15,7 @@ Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	196de218a439a2f2591177d43fe2a072
 Patch0:		%{name}-path_fix.patch
 URL:		http://pear.php.net/package/PEAR_Delegator/
+BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
 BuildArch:	noarch
