@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - delegation for PHP
-Summary(pl):	%{_pearname} - delegacja dla PHP
+Summary(pl.UTF-8):   %{_pearname} - delegacja dla PHP
 Name:		php-pear-%{_pearname}
 Version:	0.1.0
 Release:	2
@@ -29,10 +29,10 @@ design paradigms.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
+%description -l pl.UTF-8
 Implementacja tradycyjnej i niekonwencjonalnej delegacji w PHP.
-Pozwala to na pseudo-wielokrotne dziedziczenie jak równie¿ inne
-interesuj±ce paradygmaty.
+Pozwala to na pseudo-wielokrotne dziedziczenie jak rÃ³wnieÅ¼ inne
+interesujÄ…ce paradygmaty.
 
 Ta klasa ma w PEAR status: %{_status}.
 
