@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - delegation for PHP
-Summary(pl.UTF-8):   %{_pearname} - delegacja dla PHP
+Summary(pl.UTF-8):	%{_pearname} - delegacja dla PHP
 Name:		php-pear-%{_pearname}
 Version:	0.1.0
 Release:	2
